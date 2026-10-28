@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest a capability or behavior change
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem are you trying to solve? What does VeriCommit do today instead?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: |
+        If this adds or changes a verification layer, say whether it is a hard gate
+        (deterministic, cheap, runs before the build) or a soft layer (scored).
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: This is not a request to weaken an existing gate by default.
+          required: true

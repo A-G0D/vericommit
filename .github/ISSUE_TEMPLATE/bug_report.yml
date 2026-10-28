@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a defect in VeriCommit
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please do **not** include API keys, private repository
+        contents, or personal information.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the defect.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: The exact command(s) and, ideally, a minimal fixture repository.
+      placeholder: |
+        vericommit check --repo ./fixture --patch change.diff
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VeriCommit version / commit
+      placeholder: "0.1.0 or git sha"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and OS
+      placeholder: "3.12.4 on macOS 15"
+    validations:
+      required: true
